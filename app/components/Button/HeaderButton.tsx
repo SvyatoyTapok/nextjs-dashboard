@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { useState } from "react";
 
 type ButtonProps = {
     bgColor?: string,
@@ -11,11 +12,13 @@ type ButtonProps = {
 
 export default function HeaderButton({ bgColor, textColor, text, href, onClick }: ButtonProps) {
 
+    const [hover, setHover] = useState(false)
+
     const handleMouseEnter = () => {
-        console.log('handleMouseEnter')
+        setHover(true)
     }
     const handleMouseLeave = () => {
-        console.log('handleMouseLeave')
+        setHover(false)
     }
     return (
         <>
@@ -25,7 +28,7 @@ export default function HeaderButton({ bgColor, textColor, text, href, onClick }
                     onMouseLeave={handleMouseLeave}
                     onClick={() => onClick()}
                     style={{
-                        backgroundColor: bgColor,
+                        backgroundColor: hover ? 'grey' : bgColor,
                         height: 42,
                         transition: "all 0.33s",
                         alignContent: 'center',

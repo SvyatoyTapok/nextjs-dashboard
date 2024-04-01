@@ -1,20 +1,12 @@
 .headerContainer {
-    width: 20%;
-    background-color: rgb(115, 53, 183);
     height: 70px;
     align-items: center;
-    text-align: center;
-    justify-content: space-between;
     display: flex;
-    margin-left: 40%;
 }
 
-.inactiveLinkText {
-    font-weight: bold;
-    color: aliceblue;
-}
-
-.activeLinkText {
-    font-weight: bold;
-    color: yellow;
+.wrapper {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    background-color: rgb(115, 53, 183);
 }

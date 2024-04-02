@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Link from "next/link";
 import { useState } from "react";
@@ -12,9 +13,14 @@ type Props = {
     fontWeight?: string,
     width?: number,
     height?: number,
+    marginTop?: number,
+    paddingLeft?: number,
+    paddingRight?: number,
+    paddingTop?: number,
+    paddingBottom?: number,
 }
 
-export default function HeaderButton({ bgColor, width, height, textColor, text, href, onClick, fontSize, fontWeight }: Props) {
+export default function HeaderButton({ bgColor, paddingLeft, paddingRight, paddingTop, paddingBottom, marginTop, width, height, textColor, text, href, onClick, fontSize, fontWeight }: Props) {
 
     const [hover, setHover] = useState(false)
     const handleMouseEnter = () => { setHover(true) }
@@ -27,19 +33,21 @@ export default function HeaderButton({ bgColor, width, height, textColor, text, 
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{
+                marginTop: marginTop ? marginTop : '',
                 backgroundColor: bgColor,
                 height: height ? height : 34,
                 width: width ? width : '',
                 alignContent: 'center',
-                transition: 'transform 200ms ease-in-out',
+                justifyContent: 'center',
+                transition: 'transform 250ms ease-in-out',
                 borderRadius: 6,
-                paddingLeft: 20,
-                paddingRight: 20,
-                paddingTop: 20,
-                paddingBottom: 20,
+                paddingLeft: paddingLeft ? paddingLeft : 20,
+                paddingRight: paddingRight ? paddingRight : 20,
+                paddingTop: paddingTop ? paddingTop : 20,
+                paddingBottom: paddingBottom ? paddingBottom : 20,
                 marginLeft: 10,
                 marginRight: 10,
-                transform: hover ? 'translateY(-8%)' : 'translateY(0%)'
+                transform: hover ? 'translateY(-6%)' : 'translateY(0%)'
             }}>
             <text style={{
                 color: textColor,

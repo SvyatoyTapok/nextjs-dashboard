@@ -1,7 +1,9 @@
 export default function ServicesPage() {
     return (
-        <h1>
-            Services page
-        </h1>
+        <div>
+            <h1>
+                Services page
+            </h1>
+        </div>
     )
 }

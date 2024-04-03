@@ -1,6 +1,8 @@
+"use client"
 import Image from "next/image"
 import sliderImg from '../../../public/carouselImg/slider-img.png'
 import HeaderMoveButton from "../HeaderMoveButton/HeaderMoveButton"
+import { useState } from "react"
 
 export default function Carousel() {
     const carouselData = [
@@ -23,34 +25,32 @@ export default function Carousel() {
             subTitle: 'Aenean scelerisque felis utorci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.'
         },
     ]
-
+    const [move, setMove] = useState('0')
     return (
-        <div
-            className="container"
-            style={{
-                alignContent: 'center',
-                height: '100%'
-            }}>
-            < div className="slider" >
+        <div className="container">
+            < div className="slider" style={{ backgroundColor: 'red', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <div className="sliderLine"
                     style={{
-                        width: 3450,
+                        width: '5760px',
+                        transform: `translateX(${move})`,
+                        transition: 'transform 750ms ease-in-out',
                         display: 'flex',
                         flexDirection: 'row',
                     }}>
                     {carouselData.map(item =>
                         <div
+                            style={{ width: 1920 }}
                             className="sliderItem"
                             key={item.id}>
                             <div className="imageContaner"
                                 style={{
                                     display: 'flex',
                                     flexDirection: 'row',
-                                    width: 1920,
                                     justifyContent: 'center',
+
                                 }}>
                                 <div style={{
-                                    display: 'flex', width: '60%',
+                                    display: 'flex', width: '63%'
                                 }}>
                                     <Image
                                         priority={true}
@@ -68,7 +68,7 @@ export default function Carousel() {
                                         }}>
                                         <p style={{
                                             textAlign: 'center',
-                                            fontSize: 50,
+                                            fontSize: 46,
                                             fontWeight: 'bold',
                                             color: 'white'
                                         }}>
@@ -86,7 +86,7 @@ export default function Carousel() {
                                             paddingLeft={30}
                                             paddingRight={30}
                                             height={55}
-                                            fontSize={20}
+                                            fontSize={18}
                                             marginTop={40}
                                             bgColor="#5a2a8f"
                                             text="Contact Us"
@@ -95,19 +95,11 @@ export default function Carousel() {
                                         />
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
-
-                    )
-
-                    }
-
+                    )}
                 </div>
-                <div style={{ width: '100px', height: '100px', backgroundColor: 'black' }}></div>
             </div >
-            <button></button>
         </div >
     )
 }

@@ -41,14 +41,14 @@ export default function HeaderButton({ bgColor, width, height, textColor, text, 
                 marginLeft: 10,
                 marginRight: 10
             }}>
-            <text style={{
+            <p style={{
                 color: hover && isHover ? '' : textColor,
                 transition: "color 600ms ease-in-out",
                 fontSize: fontSize ? fontSize : 16,
                 fontWeight: fontWeight ? fontWeight : 400,
             }}>
                 {text}
-            </text>
+            </p>
         </Link>
     )
 }

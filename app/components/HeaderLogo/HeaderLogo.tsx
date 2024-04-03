@@ -7,7 +7,7 @@ type Props = {
 export default function HeaderLogo({ href }: Props) {
     return (
         <Link href={href}>
-            <text style={{ color: 'white', fontSize: 24, fontWeight: 'bold' }}>Digian</text>
+            <p style={{ color: 'white', fontSize: 24, fontWeight: 'bold' }}>Digian</p>
         </Link>
     )
 }

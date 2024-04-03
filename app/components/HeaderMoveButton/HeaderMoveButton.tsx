@@ -49,13 +49,13 @@ export default function HeaderButton({ bgColor, paddingLeft, paddingRight, paddi
                 marginRight: 10,
                 transform: hover ? 'translateY(-6%)' : 'translateY(0%)'
             }}>
-            <text style={{
+            <p style={{
                 color: textColor,
                 fontSize: fontSize ? fontSize : 16,
                 fontWeight: fontWeight ? fontWeight : 400,
             }}>
                 {text}
-            </text>
+            </p>
         </Link>
     )
 }

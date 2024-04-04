@@ -1,7 +1,6 @@
 import './ui/global.css'
 import { poppins } from '@/app/ui/fonts';
 import Header from './components/Header/Header';
-import { Providers } from './GlobalRedux/provider';
 
 export default function RootLayout({
   children,
@@ -12,9 +11,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
         <Header />
-        <Providers>
-          {children}
-        </Providers>
+        {children}
       </body>
     </html>
   );

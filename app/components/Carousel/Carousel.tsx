@@ -3,54 +3,74 @@ import Image from "next/image"
 import sliderImg from '../../../public/carouselImg/slider-img.png'
 import HeaderMoveButton from "../HeaderMoveButton/HeaderMoveButton"
 import { useState } from "react"
+import CarouselButtons from "./CarouselButtons"
+
+export type carouselDataType = {
+    id: number,
+    src: string,
+    title: string,
+    subTitle: string,
+}
 
 export default function Carousel() {
-    const carouselData = [
+    const carouselData: carouselDataType[] = [
         {
-            id: '1',
+            id: 0,
             src: './',
             title: 'Digital Marketing Experts',
             subTitle: 'Aenean scelerisque felis utorci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.'
         },
         {
-            id: '2',
+            id: 1,
             src: './',
             title: 'Digital Marketing Experts',
             subTitle: 'Aenean scelerisque felis utorci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.'
         },
         {
-            id: '3',
+            id: 2,
             src: './',
             title: 'Digital Marketing Experts',
             subTitle: 'Aenean scelerisque felis utorci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.'
-        },
+        }
     ]
     const [move, setMove] = useState('0')
     return (
         <div className="container">
-            < div className="slider" style={{ backgroundColor: 'red', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <div className="sliderLine"
+            < div
+                className="slider"
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    width: 1920
+                }}>
+                <div
+                    className="sliderLine"
                     style={{
-                        width: '5760px',
+                        width: 1920 * carouselData.length,
                         transform: `translateX(${move})`,
-                        transition: 'transform 750ms ease-in-out',
+                        transition: 'transform 500ms ease-in-out',
                         display: 'flex',
                         flexDirection: 'row',
                     }}>
                     {carouselData.map(item =>
                         <div
-                            style={{ width: 1920 }}
+                            style={{
+                                width: 1920,
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}
                             className="sliderItem"
                             key={item.id}>
                             <div className="imageContaner"
                                 style={{
+                                    justifyContent: 'center',
                                     display: 'flex',
                                     flexDirection: 'row',
-                                    justifyContent: 'center',
-
+                                    alignItems: 'center'
                                 }}>
                                 <div style={{
-                                    display: 'flex', width: '63%'
+                                    display: 'flex',
+                                    width: '62%',
                                 }}>
                                     <Image
                                         priority={true}
@@ -99,6 +119,7 @@ export default function Carousel() {
                         </div>
                     )}
                 </div>
+                <CarouselButtons amount={carouselData} setMove={setMove} />
             </div >
         </div >
     )

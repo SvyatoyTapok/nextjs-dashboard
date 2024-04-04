@@ -1,5 +1,4 @@
 import Carousel from "./components/Carousel/Carousel";
-import CarouselButtons from "./components/Carousel/CarouselButtons";
 
 export default function Page() {
   return (
@@ -10,14 +9,11 @@ export default function Page() {
         scrollbarWidth: 'none',
         backgroundColor: '#7335b7',
         borderRadius: '0 0 350px 0',
-        height: '90vh',
-        alignItems: 'center',
         display: 'flex',
-        width: '100%',
-        flexDirection: 'column',
+        alignItems: 'center',
+        height: '92vh',
       }}>
       <Carousel />
-      <CarouselButtons />
     </div>
   );
 }

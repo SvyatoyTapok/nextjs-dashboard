@@ -2,6 +2,7 @@
     width: 100%;
     justify-content: space-between;
     display: flex;
+    position: absolute;
     background-color: #7335b7;
 }
 

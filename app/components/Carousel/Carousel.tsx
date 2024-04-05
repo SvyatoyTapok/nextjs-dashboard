@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import sliderImg from '../../../public/carouselImg/slider-img.png'
 import HeaderMoveButton from "../HeaderMoveButton/HeaderMoveButton"
 import { useState } from "react"
 import CarouselButtons from "./CarouselButtons"
@@ -16,32 +15,33 @@ export default function Carousel() {
     const carouselData: carouselDataType[] = [
         {
             id: 0,
-            src: './',
+            src: 'https://html.design/demo/digian/images/slider-img.png',
             title: 'Digital Marketing Experts',
             subTitle: 'Aenean scelerisque felis utorci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.'
         },
         {
             id: 1,
-            src: './',
+            src: 'https://html.design/demo/digian/images/slider-img.png',
             title: 'Digital Marketing Experts',
             subTitle: 'Aenean scelerisque felis utorci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.'
         },
         {
             id: 2,
-            src: './',
+            src: 'https://html.design/demo/digian/images/slider-img.png',
             title: 'Digital Marketing Experts',
             subTitle: 'Aenean scelerisque felis utorci condimentum laoreet. Integer nisi nisl, convallis et augue sit amet, lobortis semper quam.'
-        }
+        },
     ]
-    const [move, setMove] = useState('0')
+
+    const [move, setMove] = useState('1')
     return (
+
         <div className="container">
             < div
                 className="slider"
                 style={{
                     display: 'flex',
                     flexDirection: 'column',
-                    width: 1920
                 }}>
                 <div
                     className="sliderLine"
@@ -55,9 +55,11 @@ export default function Carousel() {
                     {carouselData.map(item =>
                         <div
                             style={{
+                                display: 'flex',
                                 width: 1920,
                                 justifyContent: 'center',
-                                alignItems: 'center'
+                                alignItems: 'center',
+                                flexDirection: 'column',
                             }}
                             className="sliderItem"
                             key={item.id}>
@@ -65,17 +67,19 @@ export default function Carousel() {
                                 style={{
                                     justifyContent: 'center',
                                     display: 'flex',
-                                    flexDirection: 'row',
+                                    flexDirection: 'column',
                                     alignItems: 'center'
                                 }}>
                                 <div style={{
                                     display: 'flex',
-                                    width: '62%',
+                                    width: '60%',
                                 }}>
                                     <Image
                                         priority={true}
-                                        width={600}
-                                        src={sliderImg}
+                                        width={555}
+                                        unoptimized
+                                        height={533}
+                                        src={item.src}
                                         alt={"img"}
                                     />
                                     <div
@@ -88,8 +92,8 @@ export default function Carousel() {
                                         }}>
                                         <p style={{
                                             textAlign: 'center',
-                                            fontSize: 46,
-                                            fontWeight: 'bold',
+                                            fontSize: 48,
+                                            fontWeight: 'bolder',
                                             color: 'white'
                                         }}>
                                             {item.title}
@@ -103,10 +107,10 @@ export default function Carousel() {
                                             {item.subTitle}
                                         </p>
                                         <HeaderMoveButton
-                                            paddingLeft={30}
-                                            paddingRight={30}
+                                            paddingLeft={40}
+                                            paddingRight={40}
                                             height={55}
-                                            fontSize={18}
+                                            fontSize={20}
                                             marginTop={40}
                                             bgColor="#5a2a8f"
                                             text="Contact Us"
@@ -119,8 +123,8 @@ export default function Carousel() {
                         </div>
                     )}
                 </div>
-                <CarouselButtons amount={carouselData} setMove={setMove} />
             </div >
+            <CarouselButtons amount={carouselData} setMove={setMove} />
         </div >
     )
 }

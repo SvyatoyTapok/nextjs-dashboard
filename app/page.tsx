@@ -1,19 +1,24 @@
 import Carousel from "./components/Carousel/Carousel";
+import ServicesSection from "./components/ServicesSection/ServicesSection";
 
 export default function Page() {
   return (
-    <div
-      style={{
-        overflow: 'auto',
-        msOverflowStyle: 'none',
-        scrollbarWidth: 'none',
-        backgroundColor: '#7335b7',
-        borderRadius: '0 0 350px 0',
-        display: 'flex',
-        alignItems: 'center',
-        height: '92vh',
-      }}>
-      <Carousel />
+    <div style={{
+      overflow: 'auto',
+      msOverflowStyle: 'none',
+      scrollbarWidth: 'none',
+    }}>
+      <div
+        style={{
+          backgroundColor: '#7335b7',
+          borderRadius: '0 0 350px 0',
+          display: 'flex',
+          alignItems: 'center',
+          height: '100vh',
+        }}>
+        <Carousel />
+      </div>
+      <ServicesSection />
     </div>
   );
 }

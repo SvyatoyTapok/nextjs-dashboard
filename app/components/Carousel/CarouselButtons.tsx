@@ -7,9 +7,7 @@ type Props = {
 }
 
 export default function CarouselButtons({ setMove, amount }: Props) {
-
     const [active, setActive] = useState(0)
-
     const handleClick = (transformInfo: number) => {
         setActive(transformInfo)
         const transformPx = transformInfo * -1 * 1920
@@ -22,7 +20,8 @@ export default function CarouselButtons({ setMove, amount }: Props) {
                 height: '30px',
                 display: 'flex',
                 alignItems: 'center',
-                alignSelf: 'center',
+                width: 1920,
+                justifyContent: 'center'
             }}>
             {amount.map((item: carouselDataType) => (
                 <div

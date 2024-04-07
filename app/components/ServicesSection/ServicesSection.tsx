@@ -6,6 +6,7 @@ export type cardType = {
     image: string,
     title: string,
     subtitle: string,
+    url: string,
 }
 
 export default function ServicesSection() {
@@ -15,33 +16,36 @@ export default function ServicesSection() {
             image: 'https://html.design/demo/digian/images/s1.png',
             title: 'Link Building',
             subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            url: './'
         },
         {
             id: '2',
             image: 'https://html.design/demo/digian/images/s2.png',
             title: 'On page SEO',
             subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            url: './',
         },
         {
             id: '3',
             image: 'https://html.design/demo/digian/images/s3.png',
             title: 'Online Marketing',
             subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            url: './',
         },
         {
             id: '4',
             image: 'https://html.design/demo/digian/images/s4.png',
             title: 'Email Marketing',
             subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            url: './',
         },
     ]
-
 
     return (
         <div
             className="container"
             style={{
-                width: 1920,
+                width: '100wh',
                 display: 'flex',
                 flexDirection: 'column'
             }}>
@@ -69,7 +73,7 @@ export default function ServicesSection() {
                     width: '60%',
                     alignItems: 'center',
                     display: 'flex',
-                    justifyContent: 'space-around',
+                    justifyContent: 'space-between',
                     alignSelf: 'center',
                 }}
             >

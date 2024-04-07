@@ -31,7 +31,7 @@ export default function HeaderButton({ bgColor, width, height, textColor, text, 
                 backgroundColor: hover && isHover ? 'white' : bgColor,
                 height: height ? height : 34,
                 width: width ? width : '',
-                transition: "background-color 400ms ease-in-out",
+                transition: "background-color 300ms ease-in-out",
                 alignContent: 'center',
                 borderRadius: 6,
                 paddingLeft: 20,
@@ -43,7 +43,7 @@ export default function HeaderButton({ bgColor, width, height, textColor, text, 
             }}>
             <p style={{
                 color: hover && isHover ? '' : textColor,
-                transition: "color 600ms ease-in-out",
+                transition: "color 300ms ease-in-out",
                 fontSize: fontSize ? fontSize : 16,
                 fontWeight: fontWeight ? fontWeight : 400,
             }}>

@@ -1,6 +1,6 @@
 "use client"
-import { useState } from "react"
 import ServiceButton from "./ServiceButton"
+import HeaderMoveButton from "../HeaderMoveButton/HeaderMoveButton"
 export type cardType = {
     id: string,
     image: string,
@@ -45,7 +45,7 @@ export default function ServicesSection() {
         <div
             className="container"
             style={{
-                width: '100wh',
+
                 display: 'flex',
                 flexDirection: 'column'
             }}>
@@ -70,18 +70,36 @@ export default function ServicesSection() {
             <div
                 className="cardsContainer"
                 style={{
+                    marginTop: '2%',
                     width: '60%',
                     alignItems: 'center',
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignSelf: 'center',
-                }}
-            >
+                }}>
                 {cardsData.map(item => (
                     <ServiceButton
                         key={item.id}
                         item={item}
                     />))}
+            </div>
+            <div style={{
+                marginTop: 40,
+                alignItems: 'center',
+                justifyContent: 'center',
+                display: 'flex'
+            }}>
+                <HeaderMoveButton
+                    paddingLeft={40}
+                    paddingRight={40}
+                    height={52}
+                    width={200}
+                    fontSize={20}
+                    bgColor="#5a2a8f"
+                    text="View More"
+                    href="/"
+                    textColor="white"
+                />
             </div>
         </div>
     )

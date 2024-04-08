@@ -14,13 +14,35 @@ type Props = {
     width?: number,
     height?: number,
     marginTop?: number,
+    marginLeft?: number,
+    marginRight?: number,
+    marginBottom?: number,
     paddingLeft?: number,
     paddingRight?: number,
     paddingTop?: number,
     paddingBottom?: number,
+
 }
 
-export default function HeaderButton({ bgColor, paddingLeft, paddingRight, paddingTop, paddingBottom, marginTop, width, height, textColor, text, href, onClick, fontSize, fontWeight }: Props) {
+export default function HeaderMoveButton({
+    bgColor,
+    paddingLeft,
+    paddingRight,
+    paddingTop,
+    paddingBottom,
+    marginTop,
+    marginBottom,
+    marginLeft,
+    marginRight,
+    width,
+    height,
+    textColor,
+    text,
+    href,
+    onClick,
+    fontSize,
+    fontWeight
+}: Props) {
 
     const [hover, setHover] = useState(false)
     const handleMouseEnter = () => { setHover(true) }
@@ -33,20 +55,25 @@ export default function HeaderButton({ bgColor, paddingLeft, paddingRight, paddi
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{
+                display: 'flex',
                 marginTop: marginTop ? marginTop : '',
                 backgroundColor: bgColor,
-                height: height ? height : 34,
+                height: height ? height : '',
                 width: width ? width : '',
                 alignContent: 'center',
                 justifyContent: 'center',
+                textAlign: 'center',
+                textAlignLast: 'center',
+                alignItems: 'center',
                 transition: 'transform 250ms ease-in-out',
                 borderRadius: 6,
-                paddingLeft: paddingLeft ? paddingLeft : 20,
-                paddingRight: paddingRight ? paddingRight : 20,
-                paddingTop: paddingTop ? paddingTop : 20,
-                paddingBottom: paddingBottom ? paddingBottom : 20,
-                marginLeft: 10,
-                marginRight: 10,
+                paddingLeft: paddingLeft ? paddingLeft : 0,
+                paddingRight: paddingRight ? paddingRight : 0,
+                paddingTop: paddingTop ? paddingTop : 0,
+                paddingBottom: paddingBottom ? paddingBottom : 0,
+                marginLeft: marginLeft ? marginLeft : 0,
+                marginRight: marginRight ? marginRight : 0,
+                marginBottom: marginBottom ? marginBottom : 0,
                 transform: hover ? 'translateY(-6%)' : 'translateY(0%)'
             }}>
             <p style={{

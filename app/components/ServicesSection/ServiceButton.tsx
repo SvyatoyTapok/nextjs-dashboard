@@ -2,51 +2,31 @@ import Image from "next/image"
 import { useState } from "react"
 import type { cardType } from "./ServicesSection"
 import Link from "next/link"
-
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 type Props = {
     item: cardType,
 }
-
 export default function ServiceButton({ item }: Props) {
     const [hover, setHover] = useState(false)
-    const [positionX, setPositionX] = useState(0);
-    const [positionY, setPositionY] = useState(0);
-
-    const handleMouseMove = (e) => {
-        const rect = e.target.getBoundingClientRect()
-        const width = rect.width
-        const height = rect.height
-        const mouseX = e.clientX - rect.left
-        const mouseY = e.clientY - rect.top
-        setPositionX(mouseX / 100 * 70)
-        setPositionY(mouseY / 100 * 80)
-
-        console.log()
-    }
 
     return (
         <div
-            onMouseEnter={(e) => handleMouseMove(e)}
-            onMouseLeave={(e) => handleMouseMove(e)}
-
             style={{
+                boxShadow: '0px 0px 10px 6px rgba(0, 0, 0, 0.25)',
                 display: 'flex',
                 overflow: 'hidden',
-                boxShadow: '0 0 5px 0 rgba(0, 0, 0, 0.25)',
                 borderRadius: 10,
             }}>
-            <div style={{
-                display: 'flex',
-                position: 'relative',
-                overflow: 'hidden',
-            }}>
+            <div
+                style={{
+                    position: 'relative',
+                }}>
                 <Link
                     href={item.url}
                     onMouseEnter={() => setHover(true)}
                     onMouseLeave={() => setHover(false)}
                     className="card"
                     style={{
-                        transition: 'all 300ms',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
@@ -84,13 +64,13 @@ export default function ServiceButton({ item }: Props) {
                     <div
                         style={{
                             position: 'absolute',
-                            left: positionX,
-                            top: positionY,
+                            left: hover ? '-25%' : '0%',
+                            top: hover ? '-25%' : '0%',
                             transition: 'all 300ms',
-                            zIndex: -1,
+                            zIndex: -10,
                             borderRadius: 250,
-                            height: 100,
-                            width: 100,
+                            height: 500,
+                            width: 500,
                             backgroundColor: hover ? '#7335b7' : '',
                         }}>
                     </div>

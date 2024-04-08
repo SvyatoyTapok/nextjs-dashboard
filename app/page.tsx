@@ -18,7 +18,9 @@ export default function Page() {
         }}>
         <Carousel />
       </div>
-      <ServicesSection />
+      <div style={{ marginTop: '4%' }}>
+        <ServicesSection />
+      </div>
     </div>
   );
 }

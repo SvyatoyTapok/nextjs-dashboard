@@ -69,7 +69,8 @@ export default function Header() {
                     bgColor='#f8842b'
                     fontSize={'1rem'}
                     textColor='white'
-                    height={40}
+                    height={42}
+                    width={180}
                 />
             </div>
         </div>

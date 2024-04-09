@@ -1,3 +1,4 @@
+import AboutSection from "./components/AboutSection/AboutSection";
 import Carousel from "./components/Carousel/Carousel";
 import ServicesSection from "./components/ServicesSection/ServicesSection";
 
@@ -20,6 +21,9 @@ export default function Page() {
       </div>
       <div style={{ marginTop: '4%' }}>
         <ServicesSection />
+      </div>
+      <div style={{ marginTop: '4%' }}>
+        <AboutSection />
       </div>
     </div>
   );

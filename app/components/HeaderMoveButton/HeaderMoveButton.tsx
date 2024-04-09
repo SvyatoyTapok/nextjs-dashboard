@@ -57,7 +57,7 @@ export default function HeaderMoveButton({
             style={{
                 display: 'flex',
                 marginTop: marginTop ? marginTop : '',
-                backgroundColor: bgColor,
+                backgroundColor: bgColor ? bgColor : 'lightblue',
                 height: height ? height : '',
                 width: width ? width : '',
                 alignContent: 'center',
@@ -77,9 +77,9 @@ export default function HeaderMoveButton({
                 transform: hover ? 'translateY(-6%)' : 'translateY(0%)'
             }}>
             <p style={{
-                color: textColor,
-                fontSize: fontSize ? fontSize : 16,
-                fontWeight: fontWeight ? fontWeight : 400,
+                color: textColor ? textColor : 'white',
+                fontSize: fontSize ? fontSize : 18,
+                fontWeight: fontWeight ? fontWeight : 500,
             }}>
                 {text}
             </p>

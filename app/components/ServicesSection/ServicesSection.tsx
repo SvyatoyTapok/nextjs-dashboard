@@ -45,7 +45,6 @@ export default function ServicesSection() {
         <div
             className="container"
             style={{
-
                 display: 'flex',
                 flexDirection: 'column'
             }}>

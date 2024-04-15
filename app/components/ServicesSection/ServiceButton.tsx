@@ -2,13 +2,11 @@ import Image from "next/image"
 import { useState } from "react"
 import type { cardType } from "./ServicesSection"
 import Link from "next/link"
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 type Props = {
     item: cardType,
 }
 export default function ServiceButton({ item }: Props) {
     const [hover, setHover] = useState(false)
-
     return (
         <div
             style={{

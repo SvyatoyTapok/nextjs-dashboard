@@ -35,7 +35,6 @@ export default function Carousel() {
 
     const [move, setMove] = useState('1')
     return (
-
         <div className="container">
             < div
                 className="slider"

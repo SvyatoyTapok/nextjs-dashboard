@@ -7,9 +7,9 @@ import TestimonialSection from "./components/TestimonialSection/TestimonialSecti
 export default function Page() {
   return (
     <div style={{
-      // overflow: 'auto',
-      // msOverflowStyle: 'none',
-      // scrollbarWidth: 'none',
+      overflow: 'auto',
+      msOverflowStyle: 'none',
+      scrollbarWidth: 'none',
     }}>
       <div
         style={{
@@ -30,7 +30,7 @@ export default function Page() {
       <div style={{ marginTop: '4%' }}>
         <OurCaseSection />
       </div>
-      <div style={{ marginTop: '4%' }}>
+      <div style={{ marginTop: '4%', alignItems: 'center', }}>
         <TestimonialSection />
       </div>
     </div>

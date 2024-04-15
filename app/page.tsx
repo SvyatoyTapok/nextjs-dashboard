@@ -1,6 +1,7 @@
 import AboutSection from "./components/AboutSection/AboutSection";
 import Carousel from "./components/Carousel/Carousel";
 import OurCaseSection from "./components/OurCaseSection/OurCaseSection";
+import RequestSection from "./components/RequestSection/RequestSection";
 import ServicesSection from "./components/ServicesSection/ServicesSection";
 import TestimonialSection from "./components/TestimonialSection/TestimonialSection";
 
@@ -32,6 +33,9 @@ export default function Page() {
       </div>
       <div style={{ marginTop: '4%', alignItems: 'center', }}>
         <TestimonialSection />
+      </div>
+      <div style={{ marginTop: '4%' }}>
+        <RequestSection />
       </div>
     </div>
   );

@@ -21,6 +21,7 @@ type Props = {
     paddingRight?: number,
     paddingTop?: number,
     paddingBottom?: number,
+    borderRadius?: number
 
 }
 
@@ -41,7 +42,8 @@ export default function HeaderMoveButton({
     href,
     onClick,
     fontSize,
-    fontWeight
+    fontWeight,
+    borderRadius,
 }: Props) {
 
     const [hover, setHover] = useState(false)
@@ -58,7 +60,7 @@ export default function HeaderMoveButton({
                 display: 'flex',
                 marginTop: marginTop ? marginTop : '',
                 backgroundColor: bgColor ? bgColor : 'lightblue',
-                height: height ? height : '',
+                height: height ? height : 40,
                 width: width ? width : '',
                 alignContent: 'center',
                 justifyContent: 'center',
@@ -66,7 +68,7 @@ export default function HeaderMoveButton({
                 textAlignLast: 'center',
                 alignItems: 'center',
                 transition: 'transform 250ms ease-in-out',
-                borderRadius: 6,
+                borderRadius: borderRadius ? borderRadius : 6,
                 paddingLeft: paddingLeft ? paddingLeft : 0,
                 paddingRight: paddingRight ? paddingRight : 0,
                 paddingTop: paddingTop ? paddingTop : 0,

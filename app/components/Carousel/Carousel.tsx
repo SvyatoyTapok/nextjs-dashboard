@@ -123,8 +123,8 @@ export default function Carousel() {
                         </div>
                     )}
                 </div>
-            </div >
-            <CarouselButtons amount={carouselData} setMove={setMove} />
+            </div>
+            <CarouselButtons amount={carouselData} setMove={setMove} notActiveColor="white" />
         </div >
     )
 }

@@ -2,13 +2,14 @@ import AboutSection from "./components/AboutSection/AboutSection";
 import Carousel from "./components/Carousel/Carousel";
 import OurCaseSection from "./components/OurCaseSection/OurCaseSection";
 import ServicesSection from "./components/ServicesSection/ServicesSection";
+import TestimonialSection from "./components/TestimonialSection/TestimonialSection";
 
 export default function Page() {
   return (
     <div style={{
-      overflow: 'auto',
-      msOverflowStyle: 'none',
-      scrollbarWidth: 'none',
+      // overflow: 'auto',
+      // msOverflowStyle: 'none',
+      // scrollbarWidth: 'none',
     }}>
       <div
         style={{
@@ -28,6 +29,9 @@ export default function Page() {
       </div>
       <div style={{ marginTop: '4%' }}>
         <OurCaseSection />
+      </div>
+      <div style={{ marginTop: '4%' }}>
+        <TestimonialSection />
       </div>
     </div>
   );

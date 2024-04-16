@@ -64,6 +64,7 @@ export default function HeaderMoveButton({
                 width: width ? width : '',
                 alignContent: 'center',
                 justifyContent: 'center',
+                alignSelf: 'center',
                 textAlign: 'center',
                 textAlignLast: 'center',
                 alignItems: 'center',

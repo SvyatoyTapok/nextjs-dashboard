@@ -50,7 +50,7 @@ export default function RequestSection() {
                     placeholder="Phone number"
                     onChange={e => setNumber(e.target.value)}
                 />
-                <input
+                <textarea
                     style={{
                         marginTop: 10,
                         marginBottom: 30,

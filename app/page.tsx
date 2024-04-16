@@ -1,5 +1,6 @@
 import AboutSection from "./components/AboutSection/AboutSection";
 import Carousel from "./components/Carousel/Carousel";
+import FooterSection from "./components/FooterSection/FooterSection";
 import OurCaseSection from "./components/OurCaseSection/OurCaseSection";
 import RequestSection from "./components/RequestSection/RequestSection";
 import ServicesSection from "./components/ServicesSection/ServicesSection";
@@ -36,6 +37,9 @@ export default function Page() {
       </div>
       <div style={{ marginTop: '4%' }}>
         <RequestSection />
+      </div>
+      <div style={{ marginTop: '4%' }}>
+        <FooterSection />
       </div>
     </div>
   );
